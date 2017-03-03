@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>jQuery Template</title>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script>
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Template</title>
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Open+Sans" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  <script>
+    $(function() {
+      $('button').click(function() {
+        var userName = $('#userName').val();
+        var favoriteColor = $('#favoriteColor').val();
+        var select= $('input[name=select]:checked').val();
         
-        $(function(){
-            
-        });
-    </script>
-  </head>
-  <body>
-    <span>Your Name:</span><input type= "text" id="username"><br>
-    <span>Favorite Color:</span><input type= "text" id= "favoritecolor"><br>
-    <h1></h1>
-    
-     <!--hello (user) . Your favorite color is (color) {change the color of the word to the user input color} ? mine is too!-->
-     <!--font choices: open sans, gloria hallelujah , indie flower-->
-  </body>
+        
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+
+  <span>Your Name:</span><input type="text" name="name" id="userName"><br>
+  <span>Favorite Color:</span><input type="text" id="favoriteColor"><br>
+  <h3>Choose your font for your sentence:</h3>
+  <input type="radio" name="select" value="Open Sans" id="openSans"><span>Open Sans</span><br>
+  <input type="radio" name"select" value= "Indie Flower" id="indieFlower"><span>Indie Flower</span><br>
+  <input type="radio" name="select" value= "Dancing Script" id="dancingScript"><span>Dancing Script</span><br>
+
+  <br><button>Generate Banner</button>
+  <h1></h1>
+
+
+  <!--hello (user) . Your favorite color is (color) {change the color of the word to the user input color} ? mine is too!-->
+  <!--font choices: open sans, gloria hallelujah , indie flower-->
+</body>
+
 </html>
